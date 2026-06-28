@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Entities"
+    "\\Data",
+    "\\Interfaces",
+    "\\Migrations",
+    "\\obj",
+    "\\Repositories",
+    "\\Servies"
   ],
-  "SelectedNode": "\\Entities\\Freelancer.cs",
+  "SelectedNode": "\\Repositories",
   "PreviewInSolutionExplorer": false
 }

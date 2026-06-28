@@ -8,7 +8,7 @@ namespace FreelancerHub.Entities
 {
     public class Client : User
     {
-        public string CompanyName { get; set; }
+        public required string CompanyName { get; set; } = string.Empty;
 
         public override string GetRole()
         {

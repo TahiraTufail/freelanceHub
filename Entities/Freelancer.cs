@@ -7,8 +7,8 @@ namespace FreelancerHub.Entities
 {
     public class Freelancer : User
     {
-        public string Skills { get; set; }
-        public double HourlyRate { get; set; }
+        public required string Skills { get; set; }
+        public required double HourlyRate { get; set; }
 
         public override string GetRole()
         {

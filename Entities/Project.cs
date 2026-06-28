@@ -8,10 +8,10 @@ namespace FreelancerHub.Entities
     {
         public int Id { get; set; }
 
-        public double Amount { get; set; }
+        public string Title { get; set; } = string.Empty;
 
-        public DateTime PaymentDate { get; set; }
+        public double Budget { get; set; }
 
-        public int ProjectId { get; set; }
+        public DateTime Deadline { get; set; }
     }
 }
