@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreelancerHub.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260627114638_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260628205554_InitialCreate1")]
+    partial class InitialCreate1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,11 +80,11 @@ namespace FreelancerHub.Migrations
 
             modelBuilder.Entity("FreelancerHub.Entities.Payment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentId"));
 
                     b.Property<double>("Amount")
                         .HasColumnType("float");
@@ -92,10 +92,7 @@ namespace FreelancerHub.Migrations
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("PaymentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("PaymentId");
 
                     b.ToTable("Payments");
                 });
@@ -108,14 +105,15 @@ namespace FreelancerHub.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("Amount")
+                    b.Property<double>("Budget")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("PaymentDate")
+                    b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ProjectId")
-                        .HasColumnType("int");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -130,7 +128,10 @@ namespace FreelancerHub.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("FriendId")
+                    b.Property<double>("BidAmount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("FreelancerId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProjectId")
@@ -139,9 +140,6 @@ namespace FreelancerHub.Migrations
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("bidAmount")
-                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

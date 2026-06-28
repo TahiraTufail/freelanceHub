@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreelancerHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f37a5cc992a457f4b99dde5bdaa3ac1c4fade628")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c3b0986e7a6143272a2d548f4b221fa8fbec0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreelancerHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreelancerHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
